@@ -1,0 +1,38 @@
+{
+    "name": "lym125/tim-server-sdk",
+    "description": "Tencent im rest api sdk for server.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jing Li",
+            "email": "lym125@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "^6.0",
+        "tencent/tls-sig-api-v2": "^1.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lym125\\Tim\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lym125\\Tim\\Tests": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lym125\\Tim\\TimServiceProvider"
+            ],
+            "aliases": {
+                "Tim": "Lym125\\Tim\\Facade"
+            }
+        }
+    }
+}
